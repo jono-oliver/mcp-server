@@ -1,0 +1,33 @@
+{
+  "name": "pokemon-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "pokemon-mcp-server": "dist/server.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "tsx src/server.ts",
+    "inspect": "DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector node dist/server.js",
+    "start": "node dist/server.js"
+  },
+  "keywords": ["mcp", "pokemon", "api"],
+  "author": "",
+  "license": "ISC",
+  "description": "MCP server for Pokemon information",
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.14.3",
+    "@types/node": "^24.0.3",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.2",
+    "zod": "^3.25.67"
+  }
+}
